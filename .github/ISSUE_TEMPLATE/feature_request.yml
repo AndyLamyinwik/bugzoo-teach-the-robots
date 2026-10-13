@@ -1,0 +1,22 @@
+name: Feature proposal / 功能提案
+description: Propose a focused educational or maintenance improvement / 提出具體教學或維護改善
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or learning goal / 問題或教學目標
+      description: Who needs this, and what is currently difficult? / 誰需要這項改進，目前有什麼困難？
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution / 建議方案
+      description: Describe the smallest useful change. New lessons should explain their real misconception rules and counterexamples / 描述最小有效改進；新課程應說明真實迷思規則及反例。
+    validations:
+      required: true
+  - type: textarea
+    id: considerations
+    attributes:
+      label: Alternatives and considerations / 替代方案與考量
+      description: Optional accessibility, language, privacy, testing, or evidence considerations / 可選，說明無障礙、語言、隱私、測試或實證考量。

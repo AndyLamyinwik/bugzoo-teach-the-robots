@@ -1,0 +1,175 @@
+.ff-fields {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: #183c35;
+}
+
+.ff-fields-legend {
+  margin-bottom: 12px;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.ff-input-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.ff-field {
+  min-width: 0;
+}
+
+.ff-field label {
+  display: block;
+  margin-bottom: 7px;
+  color: #52675d;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.ff-field input {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: 10px 12px;
+  border: 1px solid #ccd5ca;
+  border-radius: 9px;
+  background: #fffefa;
+  color: #183c35;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.ff-field input:focus-visible {
+  outline: 2px solid #b36336;
+  outline-offset: 3px;
+  border-color: #b36336;
+}
+
+.ff-field input:disabled {
+  background: #f0f1e9;
+  color: #627167;
+  cursor: not-allowed;
+}
+
+.ff-fraction-value {
+  display: inline-grid;
+  grid-template-rows: 1fr 1fr;
+  min-width: 1.4em;
+  max-width: 100%;
+  color: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+  line-height: 1.45;
+  vertical-align: middle;
+}
+
+.ff-fraction-numerator,
+.ff-fraction-denominator {
+  padding-inline: 0.16em;
+  overflow-wrap: anywhere;
+}
+
+.ff-fraction-numerator {
+  border-bottom: 1.5px solid currentColor;
+}
+
+.ff-equation {
+  max-width: 100%;
+  color: #183c35;
+}
+
+.ff-equation-terms {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding-block: 4px;
+  font-size: clamp(20px, 4vw, 28px);
+}
+
+.ff-equation-operator {
+  color: #68786d;
+  font-weight: 500;
+}
+
+.ff-equation-answer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.2em;
+  padding: 0.2em 0.4em;
+  border: 1px solid #e4cbb7;
+  border-radius: 10px;
+  background: #fbf0e4;
+  color: #a3572c;
+}
+
+.ff-area {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  color: #183c35;
+}
+
+.ff-area-grid {
+  display: grid;
+  gap: 2px;
+  width: 100%;
+  min-height: 40px;
+  padding: 4px;
+  border: 1px solid #c8d1c4;
+  border-radius: 8px;
+  background: #fffefa;
+}
+
+.ff-area-portion {
+  min-width: 0;
+  border: 1px solid #d8ded0;
+  border-radius: 2px;
+  background: #eef1e7;
+}
+
+.ff-area-portion--filled {
+  border-color: #a3572c;
+  background: #b36336;
+}
+
+.ff-area-caption {
+  margin-top: 8px;
+  color: #52675d;
+  font-size: 11px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.ff-area--text {
+  display: flex;
+  justify-content: center;
+  padding-block: 6px;
+  font-size: 22px;
+}
+
+@media (max-width: 380px) {
+  .ff-input-pair {
+    gap: 9px;
+  }
+
+  .ff-field input {
+    padding-inline: 9px;
+  }
+
+  .ff-equation-terms {
+    gap: 10px;
+  }
+}

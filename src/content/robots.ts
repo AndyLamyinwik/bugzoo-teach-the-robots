@@ -1,0 +1,43 @@
+/** Presentation metadata only. Playable robot definitions will live in the domain. */
+export const robotIntroductions = [
+  {
+    id: 'fraction-fox',
+    name: 'FractionFox',
+    nickname: '分數狐狸',
+    kind: 'fox',
+    topic: '分數加法',
+    misconception: '「分子加分子，分母加分母？」',
+    description: '幫牠理解：相加之前，要先找到相同大小的單位。',
+    symbol: 'a/b',
+  },
+  {
+    id: 'discount-panda',
+    name: 'DiscountPanda',
+    nickname: '折扣熊貓',
+    kind: 'panda',
+    topic: '連續百分比折扣',
+    misconception: '「打完八折再九折，就是七折？」',
+    description: '用不同的價格實驗，找出每次折扣真正的計算基準。',
+    symbol: '%',
+  },
+  {
+    id: 'minus-mole',
+    name: 'MinusMole',
+    nickname: '負數鼴鼠',
+    kind: 'mole',
+    topic: '負數減法',
+    misconception: '「減掉一個負數，會變得更小？」',
+    description: '沿著數線探索，讓牠看懂減法與方向的關係。',
+    symbol: '−',
+  },
+  {
+    id: 'chance-crow',
+    name: 'ChanceCrow',
+    nickname: '機率烏鴉',
+    kind: 'crow',
+    topic: '不放回抽樣機率',
+    misconception: '「抽走一顆，下一次機率也一樣？」',
+    description: '追蹤每次抽樣後的變化，發現事件之間的連結。',
+    symbol: 'P',
+  },
+] as const;
