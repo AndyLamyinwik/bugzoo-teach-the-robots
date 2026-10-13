@@ -87,6 +87,8 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Read the actual Pages configuration
         id: pages
@@ -105,3 +107,39 @@ jobs:
       - name: Deploy the verified artifact
         id: deployment
         uses: actions/deploy-pages@v5
+
+  public-acceptance:
+    name: Verify the real public Pages website
+    needs: deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Install locked tools and dependencies
+        uses: pnpm/setup@v3
+        with:
+          runtime: node@24.19.0
+          require-lockfile: true
+          cache: true
+          save-cache: false
+      - name: Install only Chromium and its system dependencies
+        run: pnpm exec playwright install --with-deps chromium
+      - name: Test all flows against the deployed public URL
+        env:
+          BUGZOO_E2E_BASE_URL: ${{ needs.deploy.outputs.page_url }}
+          BUGZOO_E2E_EXTERNAL: '1'
+        run: pnpm test:e2e
+      - name: Retain public browser diagnostics on failure
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: public-browser-diagnostics
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 7
+          if-no-files-found: ignore
