@@ -17,6 +17,11 @@
 
 ## 外部發布守衛
 
+- [x] 真實公開倉庫、main 正常推送、指定 Topics 與私人漏洞回報設定已核對。
+- [x] Ubuntu 品質工作、官方 Pages 部署及真實公開 URL 的 34 次 E2E 已通過；實際 run／job 見 DEPLOYMENT。
+- [x] README Demo 只在公開網站驗收成功後加入；Windows 直連失敗如實記錄，沒有算成通過。
+- [x] 正式 Release 仍須指向最後完整 CI／公開驗收成功的 Commit，不可提前發布或覆寫既有 tag。
+
 1. 檢查真實目標倉庫；新建時不得 auto-init 產生衝突歷史。只推送已審查的來源與文件，不強制推送。
 2. 確認實際 GitHub Actions 品質工作及 Pages 部署結果；啟用 Pages 的 GitHub Actions source，建置子路徑須吻合官方 Pages metadata。
 3. 對 API 返回的真實公開 URL 執行完整 E2E，驗證四課程、保存、刷新、語言、護照、下載、桌面、320px、Console 與資源 404。

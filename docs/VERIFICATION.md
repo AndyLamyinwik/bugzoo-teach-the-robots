@@ -140,3 +140,13 @@ MinusMole 驗證題保留正減負、負減正、負減負各一題，並排除�
 | 提交檔案審查                   | 忽略規則實測排除依賴、產物、私人資料與秘密檔；暫存來源限定掃描無秘密值、私人信箱或本機路徑命中                                    |
 
 本地環境：Windows、Node.js 24.19.0、pnpm 11.25.0、Chrome 155.0.8059.40、Playwright 1.64.0。正式的公開網址與遠端 Linux CI 結果另見 DEPLOYMENT，不能把這些本地結果當成部署成功。
+
+## 第八階段：真實遠端與公開驗收
+
+2026-10-14 在新建公開倉庫 AndyLamyinwik/bugzoo-teach-the-robots 完成 main 正常推送。初次工作流程 38437984622 的 Ubuntu 工程檢查、363 個 Vitest、34 次 production E2E 與官方 Pages 部署全部成功。
+
+Windows 首次公開瀏覽器驗收在載入應用前遇到 net::ERR_CONNECTION_CLOSED，已停止共同失敗的執行，不計為通過。工作流程增加部署後唯讀的公開驗收 job：官方部署輸出的真實 URL，BUGZOO_E2E_EXTERNAL=1，不啟動 Vite／preview。
+
+[工作流程 38439243324](https://github.com/AndyLamyinwik/bugzoo-teach-the-robots/actions/runs/38439243324) 在 commit a8b3372af2c3dad9bb6a29be1afac51b4087fe67 成功。公開 job 115442284966 日誌確認目標為 https://andylamyinwik.github.io/bugzoo-teach-the-robots/，34／34 通過，1.1 分鐘，Console、HTTP 失敗及外部 origin 守衛沒有停用。四個課程、學習保存、刷新、雙語、護照下載、重設、桌面及 320px 都在公開 URL 操作，並非 localhost 模擬。
+
+這些結果不代表 Firefox／WebKit、真實手機、螢幕閱讀器或完整 WCAG 審核通過，也沒有證明教育效果。正式版本只在最後工作流程成功後建立；精確 Release target 與網址取自 GitHub 的真實記錄。

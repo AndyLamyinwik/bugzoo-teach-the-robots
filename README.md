@@ -6,6 +6,8 @@
 
 **An open-source educational game where students teach robots to overcome mathematical misconceptions through experiments and counterexamples.**
 
+[Play online / 線上體驗](https://andylamyinwik.github.io/bugzoo-teach-the-robots/) · [GitHub source](https://github.com/AndyLamyinwik/bugzoo-teach-the-robots) · [CI and public-site checks](https://github.com/AndyLamyinwik/bugzoo-teach-the-robots/actions/workflows/quality-and-pages.yml)
+
 You are the teacher. Observe a robot's reasoning, test your ideas, and provide correct examples that challenge its faulty rules. Four playable lessons combine explainable mathematics with fraction comparisons, price changes, an interactive number line, and a probability laboratory.
 
 **學生當老師，機器人當學生。** BugZoo 讓你觀察錯誤推理、設計實驗與反例，再用正確示例幫助機器人修正數學迷思。四個可玩的課程提供精確運算、互動視覺化、繁體中文／英文切換、本地進度與學習護照。
@@ -153,3 +155,5 @@ See [CONTRIBUTING.md](CONTRIBUTING.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
 [MIT License](LICENSE) — Copyright © 2026 AndyLamyinwik. The license covers this repository's project code and assets; dependencies retain their own licenses. Contributions must be compatible with those terms.
 
 發布設定與實際驗證狀態請參閱 [部署文件](docs/DEPLOYMENT.md)、[發布清單](docs/RELEASE_CHECKLIST.md)及[驗證紀錄](docs/VERIFICATION.md)。
+
+Verified on 2026-10-14: **363 Vitest tests**, **17 E2E cases × desktop/320px = 34 executions** on local development, production subpath, Ubuntu CI and the actual public Pages site. All existing 355 unit tests and 16 browser cases are preserved. Public-site verification uses GitHub-hosted Chromium; this Windows environment's direct public connection returned `ERR_CONNECTION_CLOSED`, which is recorded rather than counted as a pass. Full details and the real Actions run are in the deployment record.

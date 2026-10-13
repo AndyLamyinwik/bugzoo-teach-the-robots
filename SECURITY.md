@@ -8,11 +8,11 @@ BugZoo 的學習紀錄及語言偏好保存在瀏覽器本地，學習護照也�
 
 Please do not put exploit details, secrets, or private learning records in a public issue or pull request.
 
-When the repository owner has enabled GitHub private vulnerability reporting, open the repository's **Security → Advisories → Report a vulnerability** form. Include affected code or version, impact, and minimal reproduction steps with synthetic data. This feature may not yet be enabled; its availability must be checked on the repository.
+Private vulnerability reporting is enabled for the published BugZoo repository, as verified on 2026-10-14. Open [the private advisory form](https://github.com/AndyLamyinwik/bugzoo-teach-the-robots/security/advisories/new), or use **Security → Advisories → Report a vulnerability**. Include affected code or version, impact, and minimal reproduction steps with synthetic data. Fork owners must enable this feature on their own repositories.
 
 If that form is unavailable and no maintainer has published another private contact method, open an issue containing only a request to enable private vulnerability reporting. Do not include the vulnerability details. Wait for an available private reporting channel before sharing sensitive information. For exposed credentials, also revoke or rotate them through the issuing service promptly.
 
-請勿在公開 Issue 或 PR 貼出利用方式、憑據或私人學習資料。倉庫所有者啟用私人漏洞回報後，可使用 **Security → Advisories → Report a vulnerability**，提供受影響程式碼／版本、影響及使用虛構資料的最小重現步驟。此功能是否啟用，須以倉庫實際畫面為準。
+請勿在公開 Issue 或 PR 貼出利用方式、憑據或私人學習資料。正式 BugZoo 倉庫已啟用私人漏洞回報，於 2026-10-14 核對；可使用上方私人表單或 **Security → Advisories → Report a vulnerability**，提供受影響程式碼／版本、影響及使用虛構資料的最小重現步驟。Fork 的所有者須自行啟用。
 
 若表單不可用，且維護者未公布其他私人聯絡方式，僅建立「請啟用私人漏洞回報」的 Issue，不提供漏洞細節，待私人管道可用後再回報。已外洩的憑據亦應立即向發行服務撤銷或更新。
 

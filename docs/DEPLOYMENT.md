@@ -12,6 +12,8 @@ Enable **Settings → Pages → Source → GitHub Actions** on the actual reposi
 
 普通 PR 僅執行品質檢查，沒有部署權限；main 的品質檢查與建置成功後才上傳 dist 並部署。失敗時保留瀏覽器診斷七天，這些測試資料不屬於 Pages 網站。
 
+After deployment, a separate read-only Ubuntu job installs locked tools and runs all browser cases against the official deployment output URL with `BUGZOO_E2E_EXTERNAL=1`. It does not start Vite or preview. Public acceptance failures fail the workflow and retain their diagnostics; an uploaded artifact alone cannot qualify a release.
+
 ## Repository paths and refresh
 
 Vite reads validated `BUGZOO_BASE_PATH`; development defaults to `/`. The workflow derives `/actual-repository-name/` from `GITHUB_REPOSITORY`, except owner `.github.io` repositories, which use `/`. Favicon, brand assets and lazy JavaScript/CSS use this prefix. The deploy job checks the resulting path against official Pages metadata and fails if they differ, instead of publishing an incorrectly based site.
@@ -42,3 +44,13 @@ Do not count offline tests as public acceptance. Record the real commit SHA, Act
 ## Acceptance record
 
 The Phase Eight record is added here only after the corresponding action has actually run. Current historical quality evidence is retained in [VERIFICATION](VERIFICATION.md); the publication checklist is [RELEASE_CHECKLIST](RELEASE_CHECKLIST.md).
+
+- Repository created and verified public: [AndyLamyinwik/bugzoo-teach-the-robots](https://github.com/AndyLamyinwik/bugzoo-teach-the-robots), with owner admin/push permission; main was pushed normally, without forced updates.
+- Initial verified commit: `6d7c2051bef4c72ce3357b75f8bf243a441471ac`. [Initial Actions run](https://github.com/AndyLamyinwik/bugzoo-teach-the-robots/actions/runs/38437984622) completed successfully: Ubuntu engineering checks, 363 Vitest, 34 production E2E, artifact upload and official Pages deployment.
+- Pages uses Actions source with HTTPS enforced. Private vulnerability reporting was enabled and verified through GitHub's API on 2026-10-14.
+- The initial Windows public-browser attempt stopped with `net::ERR_CONNECTION_CLOSED` before the application loaded. It did not produce a successful public-game result. Public acceptance was moved to a GitHub-hosted Ubuntu browser job using the actual deployed URL; its result is recorded separately when complete.
+
+- Public website: [BugZoo online](https://andylamyinwik.github.io/bugzoo-teach-the-robots/), taken from the official Pages API and deployment output and verified with a real browser.
+- Verified public-acceptance commit: `a8b3372af2c3dad9bb6a29be1afac51b4087fe67`. [Actions run with public acceptance](https://github.com/AndyLamyinwik/bugzoo-teach-the-robots/actions/runs/38439243324) completed successfully: quality, deployment and the real public website job.
+- Public job [115442284966](https://github.com/AndyLamyinwik/bugzoo-teach-the-robots/actions/runs/38439243324/job/115442284966) used `BUGZOO_E2E_BASE_URL=https://andylamyinwik.github.io/bugzoo-teach-the-robots/` and `BUGZOO_E2E_EXTERNAL=1`. It passed all 34 tests in 1.1 minutes, covering four complete lessons, persistence, reload, language, real Markdown downloads, reset, keyboard, five responsive widths and static assets. No localhost server was started, and console/HTTP/external-request failure guards remained active.
+- The subsequent documentation commit adds only verified links and results; it must pass the same complete workflow before a formal release is tagged. The release's exact target is recorded by GitHub Releases, not inferred from a documentation timestamp.
