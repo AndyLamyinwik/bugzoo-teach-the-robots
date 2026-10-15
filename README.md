@@ -4,15 +4,71 @@
 
 # BugZoo — Teach the Wrong Robots
 
+[English](#english) · [繁體中文](#繁體中文) · [简体中文](#简体中文)
+
+## English
+
 **An open-source educational game where students teach robots to overcome mathematical misconceptions through experiments and counterexamples.**
 
-[Play online / 線上體驗](https://andylamyinwik.github.io/bugzoo-teach-the-robots/) · [GitHub source](https://github.com/AndyLamyinwik/bugzoo-teach-the-robots) · [CI and public-site checks](https://github.com/AndyLamyinwik/bugzoo-teach-the-robots/actions/workflows/quality-and-pages.yml)
+[Play online](https://andylamyinwik.github.io/bugzoo-teach-the-robots/) · [GitHub source](https://github.com/AndyLamyinwik/bugzoo-teach-the-robots) · [CI and public-site checks](https://github.com/AndyLamyinwik/bugzoo-teach-the-robots/actions/workflows/quality-and-pages.yml)
 
 You are the teacher. Observe a robot's reasoning, test your ideas, and provide correct examples that challenge its faulty rules. Four playable lessons combine explainable mathematics with fraction comparisons, price changes, an interactive number line, and a probability laboratory.
 
-**學生當老師，機器人當學生。** BugZoo 讓你觀察錯誤推理、設計實驗與反例，再用正確示例幫助機器人修正數學迷思。四個可玩的課程提供精確運算、互動視覺化、繁體中文／英文切換、本地進度與學習護照。
+- [FractionFox](https://andylamyinwik.github.io/bugzoo-teach-the-robots/#fractionfox): fraction addition.
+- [DiscountPanda](https://andylamyinwik.github.io/bugzoo-teach-the-robots/#discountpanda): successive percentage discounts.
+- [MinusMole](https://andylamyinwik.github.io/bugzoo-teach-the-robots/#minusmole): negative subtraction with an interactive number line.
+- [ChanceCrow](https://andylamyinwik.github.io/bugzoo-teach-the-robots/#chancecrow): probability and sampling without replacement.
+
+### Start playing
+
+1. Open **[Play online](https://andylamyinwik.github.io/bugzoo-teach-the-robots/)**. No registration or installation is needed. Use the language selector at the top to choose English or Traditional Chinese.
+2. Pick a robot from the home-page lesson cards or the top **Choose a lesson** menu; the links above also open each lesson directly.
+3. Follow **Observe → Hypothesize → Experiment → Teach → Verify**. Use correct examples to eliminate mistaken rules, then pass three unseen questions alongside the corrected robot to finish.
+4. Open **[My progress](https://andylamyinwik.github.io/bugzoo-teach-the-robots/#progress)** to continue a lesson, or **[Learning Passport](https://andylamyinwik.github.io/bugzoo-teach-the-robots/#passport)** to review your results and download a Markdown record. Progress stays in the current browser.
 
 The robots use deterministic, testable rules. There is no AI API, simulated chat service, or claim of neural-network training. BugZoo is an educational activity, not a scientifically validated claim of improved grades or a certification of mathematical ability.
+
+## 繁體中文
+
+**學生當老師，機器人當學生。** BugZoo 是一個開源數學教學遊戲：你透過觀察錯誤推理、設計實驗與提出反例，再用正確示例幫助機器人修正數學迷思。機器人的回答由可解釋、可驗證的規則產生，不需要 AI API。
+
+四個遊戲均可直接體驗：
+
+- [FractionFox 分數狐狸](https://andylamyinwik.github.io/bugzoo-teach-the-robots/#fractionfox)：探索分數加法與通分。
+- [DiscountPanda 折扣熊貓](https://andylamyinwik.github.io/bugzoo-teach-the-robots/#discountpanda)：理解連續折扣為何不能直接相加。
+- [MinusMole 負數鼴鼠](https://andylamyinwik.github.io/bugzoo-teach-the-robots/#minusmole)：透過互動數線理解負數減法。
+- [ChanceCrow 機率烏鴉](https://andylamyinwik.github.io/bugzoo-teach-the-robots/#chancecrow)：用抽球實驗探索不放回抽樣機率。
+
+### 如何開始
+
+1. 點選 **[進入線上遊戲](https://andylamyinwik.github.io/bugzoo-teach-the-robots/)**，不需註冊或安裝。網站上方可切換繁體中文／英文。
+2. 在首頁的角色卡片選擇課程，或使用上方的「選擇課程」選單；也可以直接點選上面的機器人連結。
+3. 依序完成 **觀察 → 猜想 → 實驗 → 教學 → 驗證**。自行輸入題目、比較答案，用正確示例排除錯誤規則；只剩正確規則後，與機器人一起答對三道未見題即可通關。
+4. 到 **[我的學習進度](https://andylamyinwik.github.io/bugzoo-teach-the-robots/#progress)** 繼續課程，或到 **[學習護照](https://andylamyinwik.github.io/bugzoo-teach-the-robots/#passport)** 查看成果並匯出 Markdown 紀錄。進度只保存在目前瀏覽器，不會上傳或跨裝置同步。
+
+學習護照代表完成指定遊戲挑戰，不是學科能力認證；本專案也未宣稱已經科學研究證實能提升成績。
+
+## 简体中文
+
+**学生当老师，机器人当学生。** BugZoo 是一个开源数学教学游戏：你通过观察错误推理、设计实验和提出反例，再用正确示例帮助机器人纠正数学误区。机器人的回答由可解释、可验证的规则生成，不需要 AI API。
+
+四个游戏都可以直接体验：
+
+- [FractionFox 分数狐狸](https://andylamyinwik.github.io/bugzoo-teach-the-robots/#fractionfox)：探索分数加法与通分。
+- [DiscountPanda 折扣熊猫](https://andylamyinwik.github.io/bugzoo-teach-the-robots/#discountpanda)：理解连续折扣为什么不能直接相加。
+- [MinusMole 负数鼹鼠](https://andylamyinwik.github.io/bugzoo-teach-the-robots/#minusmole)：通过互动数轴理解负数减法。
+- [ChanceCrow 概率乌鸦](https://andylamyinwik.github.io/bugzoo-teach-the-robots/#chancecrow)：用抽球实验探索不放回抽样的概率。
+
+### 如何开始
+
+1. 点击 **[进入在线游戏](https://andylamyinwik.github.io/bugzoo-teach-the-robots/)**，无需注册或安装。游戏界面目前提供繁体中文和英语；本节是简体中文使用说明。
+2. 在首页的角色卡片选择课程，或使用上方的课程菜单（界面显示为「選擇課程」）；也可以直接点击上面的机器人链接。
+3. 依次完成 **观察 → 提出猜想 → 设计实验 → 用正确示例教学 → 完成验证**。自行输入题目、比较答案，用正确示例排除错误规则；只剩正确规则后，与机器人一起答对三道未见题即可通关。
+4. 打开 **[学习进度](https://andylamyinwik.github.io/bugzoo-teach-the-robots/#progress)** 继续课程，或打开 **[学习护照](https://andylamyinwik.github.io/bugzoo-teach-the-robots/#passport)**（界面显示为「學習護照」），查看结果并下载 Markdown 记录。进度仅保存在当前浏览器，不会上传或跨设备同步。
+
+学习护照代表完成指定游戏挑战，不是学科能力认证；本项目也未声称已经科学研究证实能够提高成绩。
+
+---
 
 ## Meet the robots / 四個機器人
 
